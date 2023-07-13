@@ -9,6 +9,7 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 import Entities.Sesso;
@@ -35,6 +36,8 @@ public class Persona {
     @Enumerated(EnumType.STRING)
     private Sesso sesso;
     
+    @ManyToMany
+    private Set<GaraDiAtletica> gara;
 
     public Persona (String nome, String cognome, String email, LocalDate dataNascita, Sesso sesso) {
 
