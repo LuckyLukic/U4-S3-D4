@@ -1,5 +1,6 @@
 package Classi;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -15,8 +16,9 @@ import lombok.Setter;
 
 
 public class Concerto extends Evento{
-	
+	@Column(name= "Genere")
 	private Genere genere;
+	@Column(name = "Streaming")
 	private boolean inStreaming;
 	
 	public Concerto () {}	

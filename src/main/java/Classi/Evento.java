@@ -8,6 +8,8 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 
 import Entities.TipoEvento;
@@ -17,6 +19,7 @@ import lombok.Setter;
 
 	
 	@Entity
+	@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
 	@Table(name = "Evento")
 	@Getter
 	@Setter

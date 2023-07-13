@@ -1,5 +1,6 @@
 package Classi;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -15,10 +16,15 @@ import lombok.Setter;
 
 public class PartitaDiCalcio extends Evento {
 	
+	@Column(name = "Squadra di Casa")
 	private String squadraDiCasa;
+	@Column(name = "Squadra Ospite")
 	private String ospite;
+	@Column(name = "Squadra Vincente")
 	private String squadraVincente;
+	@Column(name = "Gol in Casa")
 	private int golCasa;
+	@Column(name = "Gol Ospiti")
 	private int golOspite;
 	
 	public PartitaDiCalcio(String squadraDiCasa, String ospite, String squadraVincente, int golCasa, int golOspite) {

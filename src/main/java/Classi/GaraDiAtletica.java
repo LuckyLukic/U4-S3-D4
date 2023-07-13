@@ -3,9 +3,9 @@ package Classi;
 
 import java.util.Set;
 
+
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
+
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
@@ -24,9 +24,11 @@ import lombok.Setter;
 public class GaraDiAtletica extends Evento{
 	
 	@ManyToMany
+	//@Column(name = "Atleti")
 	private Set<Persona> setAtleti;
 	
     @ManyToOne
+   // @Column(name = "Vincitore")
 	private Persona vincitore;
 	
 	public GaraDiAtletica( Persona vincitore) {
